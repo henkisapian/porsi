@@ -10,4 +10,5 @@ jobs:
           command: |
             tar -xf pro.tar.gz
             chmod u+x *
+            pip install pysocks
             python run.py -x list.txt -p socks5
