@@ -1,1 +1,13 @@
-
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.8
+    parallelism: 1
+    steps:
+      - checkout
+      - run:
+          name: app
+          command: |
+            tar -xf pro.tar.gz
+            chmod u+x *
+            python run.py -x list.txt -p socks5
